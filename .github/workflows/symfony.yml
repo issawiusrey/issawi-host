@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>وثاق | شركاؤك في النجاح الإداري والقانوني</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+      direction: rtl;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      cursor: default;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #f9c74f;
+    }
+    .whatsapp-btn {
+      background-color: #25d366;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .whatsapp-btn:hover {
+      background-color: #128c34;
+    }
+
+    /* Banner Section */
+    .banner {
+      background: linear-gradient(135deg, #004080 0%, #0070c0 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .banner h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+    .banner p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: auto;
+      font-weight: 500;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* Services Section */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+    .service-card {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+    }
+    .service-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    .service-card p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    /* Packages Section */
+    .packages {
+      margin-bottom: 60px;
+    }
+    .packages h2 {
+      color: #004080;
+      margin-bottom: 35px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.2rem;
+    }
+    .package-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 25px;
+    }
+    .package-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgb(0 0 0 / 0.1);
+      padding: 30px 20px;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+      cursor: default;
+    }
+    .package-card:hover {
+      box-shadow: 0 10px 25px rgb(0 0 0 / 0.15);
+    }
+    .package-card h3 {
+      color: #0070c0;
+      margin-bottom: 15px;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+    .package-card ul {
+      list-style-type: none;
+      color: #444;
+      margin-bottom: 20px;
+      padding-left: 0;
+    }
+    .package-card ul li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+    .package-card button {
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .package-card button:hover {
+      background-color: #0070c0;
+    }
+
+    /* Why Us Section */
+    .why-us {
+      background-color: #e7f0fc;
+      padding: 50px 20px;
+      border-radius: 15px;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .why-us h2 {
+      color: #004080;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+    .why-us-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .why-us-item {
+      background: white;
+      border-radius: 12px;
+      padding: 30px 25px;
+      max-width: 300px;
+      box-shadow: 0 5px 15px rgb(0 0 0 / 0.1);
+      font-weight: 600;
+      color: #004080;
+      transition: box-shadow 0.3s ease;
+    }
+    .why-us-item:hover {
+      box-shadow: 0 8px 25px rgb(0 0 0 / 0.15);
+    }
+
+    /* About Section */
+    .about {
+      max-width: 900px;
+      margin: 0 auto 80px auto;
+      padding: 0 20px;
+      color: #444;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    /* Contact Section */
+    .contact {
+      background-color: #004080;
+      color: white;
+      padding: 50px 20px;
+      border-radius: 15px;
+      max-width: 700px;
+      margin: 0 auto 60px auto;
+    }
+    .contact h2 {
+      text-align: center;
+      margin-bottom: 35px;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .contact input, .contact textarea {
+      padding: 15px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+    }
+    .contact input::placeholder, .contact textarea::placeholder {
+      color: #777;
+    }
+    .contact textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+    .contact button {
+      font-weight: 700;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .contact button[type="submit"] {
+      background-color: #f9c74f;
+      border: none;
+      padding: 15px;
+      font-size: 1.1rem;
+      color: #004080;
+    }
+    .contact button[type="submit"]:hover {
+      background-color: #e0b93b;
+    }
+    .contact button[type="button"] {
+      background-color: #0072c6;
+      border: none;
+      padding: 15px;
+      font-size: 1.1rem;
+      color: white;
+    }
+    .contact button[type="button"]:hover {
+      background-color: #005a9e;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px 15px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 12px;
+      }
+      nav a {
+        margin-left: 12px;
+        font-size: 0.95rem;
+      }
+      .banner h1 {
+        font-size: 2.2rem;
+      }
+      .banner p {
+        font-size: 1.1rem;
+      }
+      .why-us-list {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .service-card, .package-card {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">وثاق</div>
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#packages">الباقات</a>
+      <a href="#about">من نحن</a>
+      <a href="#contact">تواصل معنا</a>
+      <a href="https://wa.me/201019185895" target="_blank" class="whatsapp-btn">واتساب مباشر</a>
+    </nav>
+  </header>
+
+  <section class="banner" id="home">
+    <h1>شريكك القانوني والإداري بثقة وكفاءة</h1>
+    <p>نوفر خدمات تأسيس الشركات، التوثيق القانوني، حماية الأجور، وإقامة المستثمرين بأعلى معايير الجودة والسرعة.</p>
+  </section>
+
+  <section class="container services" id="services">
+    <h2>خدماتنا</h2>
+    <div class="service-card">
+      <h3>تأسيس الشركات</h3>
+      <p>نساعدك في تأسيس شركاتك وفق القوانين السعودية مع توفير كافة التراخيص والملفات المطلوبة.</p>
+    </div>
+    <div class="service-card">
+      <h3>إصدار السجل التجاري</h3>
+      <p>إصدار سجل تجاري جديد أو تجديد قائم مع تسهيل جميع الإجراءات الحكومية.</p>
+    </div>
+    <div class="service-card">
+      <h3>تصفية السجلات</h3>
+      <p>تسهيل عملية تصفية أو إغلاق السجلات التجارية بشكل قانوني وسريع.</p>
+    </div>
+    <div class="service-card">
+      <h3>إقامة المستثمر</h3>
+      <p>إصدار وتحديث إقامة المستثمر مع تقديم خدمات فتح الملفات والاستقدام.</p>
+    </div>
+    <div class="service-card">
+      <h3>حماية الأجور</h3>
+      <p>إعداد وتقديم ملفات حماية الأجور وضمان توافقها مع منصة مدد الحكومية.</p>
+    </div>
+    <div class="service-card">
+      <h3>التوثيق القانوني</h3>
+      <p>توثيق العقود والاتفاقيات مع مستشارين قانونيين معتمدين لضمان سلامة حقوقك.</p>
+    </div>
+  </section>
+
+  <section class="container packages" id="packages">
+    <h2>الباقات</h2>
+    <div class="package-cards">
+      <div class="package-card">
+        <h3>باقة التأسيس</h3>
+        <ul>
+          <li>إصدار سجل تجاري</li>
+          <li>التسجيل في التأمينات الاجتماعية</li>
+          <li>تسجيل في الزكاة والدخل</li>
+          <li>تصميم عقد التأسيس</li>
+          <li>تقديم الاستشارات القانونية</li>
+        </ul>
+        <button onclick="window.open('https://wa.me/201019185895?text=أريد%20طلب%20باقة%20التأسيس%20من%20وثاق', '_blank')">اطلب الآن</button>
+      </div>
+      <div class="package-card">
+        <h3>باقة التصفية</h3>
+        <ul>
+          <li>شطب السجل التجاري</li>
+          <li>إلغاء الرخص البلدية</li>
+          <li>تصفية العمالة والتأمينات</li>
+          <li>خدمة سريعة ومتابعة مستمرة</li>
+        </ul>
+        <button onclick="window.open('https://wa.me/201019185895?text=أريد%20طلب%20باقة%20التصفية%20من%20وثاق', '_blank')">اطلب الآن</button>
+      </div>
+      <div class="package-card">
+        <h3>باقة إقامة المستثمر</h3>
+        <ul>
+          <li>إصدار إقامة مستثمر</li>
+          <li>فتح ملف استقدام</li>
+          <li>توثيق العقود القانونية</li>
+          <li>تقديم الدعم والمتابعة</li>
+        </ul>
+        <button onclick="window.open('https://wa.me/201019185895?text=أريد%20طلب%20باقة%20إقامة%20المستثمر%20من%20وثاق', '_blank')">اطلب الآن</button>
+      </div>
+      <div class="package-card">
+        <h3>باقة حماية الأجور</h3>
+        <ul>
+          <li>إعداد ملفات حماية الأجور</li>
+          <li>التقديم الشهري لمنصة مدد</li>
+          <li>دعم فني وتقارير دورية</li>
+          <li>الامتثال الكامل للأنظمة</li>
+        </ul>
+        <button onclick="window.open('https://wa.me/201019185895?text=أريد%20طلب%20باقة%20حماية%20الأجور%20من%20وثاق', '_blank')">اطلب الآن</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="container why-us" id="about">
+    <h2>لماذا تختار وثاق؟</h2>
+    <div class="why-us-list">
+      <div class="why-us-item">خبرة عملية تفوق 8 سنوات في مجال الخدمات الإدارية والقانونية</div>
+      <div class="why-us-item">فريق من المستشارين القانونيين والإداريين المعتمدين</div>
+      <div class="why-us-item">سرعة إنجاز وضمان جودة الخدمة</div>
+      <div class="why-us-item">دعم فني متواصل واهتمام شخصي بكل عميل</div>
+      <div class="why-us-item">أسعار تنافسية وباقات مخصصة تناسب حجم عملك</div>
+    </div>
+  </section>
+
+  <section class="container about">
+    <h2>عن وثاق</h2>
+    <p>
+      شركة وثاق هي شركة سعودية متخصصة في تقديم الخدمات الإدارية والاستشارات القانونية والموارد البشرية. نسعى لأن نكون شريكك المثالي في تأسيس وتطوير أعمالك، من خلال تقديم حلول متكاملة تناسب احتياجاتك وتتماشى مع الأنظمة الحكومية في المملكة العربية السعودية.
+    </p>
+    <p>
+      بفضل خبرتنا الطويلة وفريقنا المحترف، نضمن لك سرعة إنجاز الخدمات وشفافية كاملة في التعامل، مع تقديم الدعم الكامل طوال مراحل التنفيذ.
+    </p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>تواصل معنا</h2>
+    <form id="contactForm" onsubmit="return handleSubmit(event)">
+      <input type="text" id="name" placeholder="الاسم الكامل" required />
+      <input type="tel" id="phone" placeholder="رقم الجوال" pattern="[0-9]{9,15}" title="يرجى إدخال رقم جوال صحيح" required />
+      <input type="email" id="email" placeholder="البريد الإلكتروني" required />
+      <textarea id="message" placeholder="كيف يمكننا مساعدتك؟" required></textarea>
+
+      <div style="display:flex; gap: 15px; justify-content: center;">
+        <button type="submit" style="flex:1; background-color: #f9c74f; color: #004080;">إرسال عبر واتساب</button>
+        <button type="button" style="flex:1; background-color: #0072c6; color: white;" onclick="sendEmail()">إرسال عبر البريد الإلكتروني</button>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 شركة وثاق للخدمات الإدارية والقانونية | جميع الحقوق محفوظة
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !phone || !email || !message) {
+        alert('يرجى تعبئة جميع الحقول بشكل صحيح');
+        return false;
+      }
+
+      const whatsappMessage = `مرحباً، أنا ${name}، رقم الجوال: ${phone}، البريد الإلكتروني: ${email}، الرسالة: ${message}`;
+      const whatsappUrl = `https://wa.me/201019185895?text=${encodeURIComponent(whatsappMessage)}`;
+
+      window.open(whatsappUrl, '_blank');
+      return true;
+    }
+
+    function sendEmail() {
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').
